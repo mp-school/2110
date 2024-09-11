@@ -1,6 +1,6 @@
 // Assignment 1 - Csci 2110
 // Author: Megan Picard
-// Purpose -> Simple Board Game
+// Purpose -> 
 
 public class Pieces{
     private String name;
