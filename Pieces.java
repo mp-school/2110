@@ -8,7 +8,7 @@ public class Pieces{
     private int positionX;
     private int positionY;
 
-// conscturctor
+// consruct
 public Pieces(String name, String colour, int positionX, int positionY){
     this.name = name;
     this.colour = colour;
