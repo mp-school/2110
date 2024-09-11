@@ -1,15 +1,11 @@
-// Assignment 1 - Csci 2110
-// Author: Megan Picard
-// Purpose -> Simple Board Game
-
-public class Pieces{
+public class Pieces1 {
     private String name;
     private String colour;
     private int positionX;
     private int positionY;
 
 // conscturctor
-public Pieces(String name, String colour, int positionX, int positionY){
+public Pieces1(String name, String colour, int positionX, int positionY){
     this.name = name;
     this.colour = colour;
     this.positionX = positionX;
@@ -33,6 +29,19 @@ public String toString(){
     return name + " " + colour + " at position (" + positionX + ", " + positionY + ")";
 }
 
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
