@@ -30,7 +30,7 @@ public void setPositionY(int positionY){this.positionY = positionY;}
 
 
 public String toString(){
-    return name + " " + colour + " at position (" + positionX + ", " + positionY + ")";
+    return  name + " " + colour + " at position (" + positionX + ", " + positionY + ")";
 }
 
 
