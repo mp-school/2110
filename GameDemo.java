@@ -49,9 +49,8 @@ if (ui.equals("create")){
       
    int positionX = in.nextInt();
    int positionY = in.nextInt();
-   String type = in.next(); // forget about for now
+   String type = in.nextLine(); // forget about for now
    
-   in.nextLine(); // newline
 
    System.out.println("Input a name for the new piece:");
    String name = in.nextLine();
@@ -64,14 +63,21 @@ if (ui.equals("create")){
    Pieces gamePiece = new Pieces (name, colour, positionX, positionY );
 	System.out.println(gamePiece);	
 
-
-
+    if (type.equals(" fast")){
+        System.out.println("speedy");
+    } if (type.equals(" fast flexible")){
+        System.out.println("speedy and bendy");
     }
 
+System.out.println(" ");
+System.out.println("Enter a command (type help for details)");
+
+System.out.println(type);
 
 
 
 
 }
     }
+}
 }
