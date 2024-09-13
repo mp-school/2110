@@ -36,25 +36,32 @@ for(int i=0; i<size; i++){
 
 }
     
-
+System.out.println("Enter a command (type help for details)");
 // UI
 while(!ui.equals("exit")){
     ui = in.next();
-System.out.println("Enter a command (type help for details)");
-    
-if (ui.equals("help"))
+
+if (ui.equals("exit")){
+    break;
+}
+
+if (ui.equals("help")){
           System.out.println("Possible commands are as follows:");
           System.out.println("create location [fast][flexible]: Creates a new piece.");
           System.out.println("move location direction [spaces]: Moves a piece.");
           System.out.println("print: Displays the board.");
           System.out.println("help: Displays help");
           System.out.println("exit: Exits the program.");
-          
+          System.out.println("Enter a command (type help for details)");
+}
+
 if (ui.equals("print")){
-    System.out.print("printed");
+    System.out.println("printed");
+    System.out.println("Enter a command (type help for details)");
 }
 
       }
+
 
 
     }
