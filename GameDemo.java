@@ -8,8 +8,6 @@ public class GameDemo{
     public static void main (String[] args){
 Scanner in = new Scanner(System.in); // Read in
 
-
-String name = in.nextLine();
 //String colour = in.nextLine();
 //int positionX = in.nextInt();
 //int positionY = in.nextInt();
@@ -24,6 +22,7 @@ String name = in.nextLine();
 int size = 8;
 String[][] pieceTracker = new String[size][size];
 
+String ui = " ";
 
 // printing
 for(int i=0; i<size; i++){
@@ -39,22 +38,22 @@ for(int i=0; i<size; i++){
     
 
 // UI
-
+while(!ui.equals("exit")){
+    ui = in.next();
 System.out.println("Enter a command (type help for details)");
-    switch (name) {
-        case "help":
+    
+if (ui.equals("help"))
           System.out.println("Possible commands are as follows:");
           System.out.println("create location [fast][flexible]: Creates a new piece.");
           System.out.println("move location direction [spaces]: Moves a piece.");
           System.out.println("print: Displays the board.");
           System.out.println("help: Displays help");
           System.out.println("exit: Exits the program.");
-          break;
-        case "print":
-          // code block
-          break;
-        default:
-          // code block
+          
+if (ui.equals("print")){
+    System.out.print("printed");
+}
+
       }
 
 
