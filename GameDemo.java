@@ -38,7 +38,7 @@ for(int i=0; i<size; i++){
     
 System.out.println("Enter a command (type help for details)");
 // UI
-while(!ui.equals("exit")){
+while(!ui.equals("exit")){ // mabye change to switch latet
     ui = in.next();
 
 if (ui.equals("exit")){
@@ -56,6 +56,8 @@ if (ui.equals("help")){
 }
 
 if (ui.equals("print")){
+
+    // to add later
     System.out.println("printed");
     System.out.println("Enter a command (type help for details)");
 }
