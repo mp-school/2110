@@ -1,3 +1,4 @@
+package A1;
 // Assignment 1 - Csci 2110
 // Author: Megan Picard
 // Purpose -> 

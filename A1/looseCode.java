@@ -1,3 +1,4 @@
+package A1;
 // From Game Pieces
 
 // functional printing function
@@ -20,3 +21,6 @@ int positionY = in.nextInt();
 
 
 Pieces gamePiece = new Pieces(name, colour, positionX, positionY);
+
+Pieces gamePiece = new Pieces (name, colour, positionX, positionY );
+	System.out.println(gamePiece);	
