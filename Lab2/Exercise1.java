@@ -11,7 +11,7 @@ public class Exercise1{
         int testCases = in.nextInt();
 
         // getting values of rectangles
-        for (int i = 0; i < testCases; i++){
+        for (int i = 0; i <= testCases; i++){
             // rec 1
             int xpos1 = in.nextInt();
             int ypos1 = in.nextInt();
@@ -30,7 +30,7 @@ public class Exercise1{
             // size check
             boolean rectCheck;
 
-            if (width1 > width2 && height1 > height2) {
+            if (width1 >= width2 && height1 >= height2) {
                 rectCheck = true;
             } else {
                 rectCheck = false;
