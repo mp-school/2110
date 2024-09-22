@@ -22,27 +22,35 @@ public class Rectangle2 {
         return (px>=xpos && px<=xpos+width && py>=ypos && py<= ypos+height); } //contains method: returns true if another rectangle r is contained within this rectangle
         //returns true if the rectangle touches the boundaries
         //it uses the point contains method 
-        public boolean contains(Rectangle r)
+        public boolean contains(Rectangle2 r)
         {
         return(this.contains(r.getX(),r.getY())&& this.contains(r.getX() + r.getWidth(), r.getY()+r.getHeight())); }
 
         // TOUCHES
-        public boolean touches(int px, int py) {
-            return (px>=xpos && px<=xpos+width && py>=ypos && py<= ypos+height); } //contains method: returns true if another rectangle r is contained within this rectangle
-            //returns true if the rectangle touches the boundaries
-            //it uses the point contains method 
-            public boolean touches(Rectangle r)
-            {
-            return(this.contains(r.getX(),r.getY())&& this.contains(r.getX() + r.getWidth(), r.getY()+r.getHeight())); }
-    
+       //public boolean touch(int px, int py) {
+            //return (px>=xpos && px<=xpos+width && py>=ypos && py<= ypos+height); }           
+           
+            public boolean touch(Rectangle2 r){
+
+                return (this.xpos == r.xpos + r.width || this.xpos + this.width == r.xpos ||
+                this.ypos == r.ypos + r.height || this.ypos + this.height == r.ypos ||
+                (this.xpos == r.xpos && this.ypos == r.ypos) ||
+                (this.xpos + this.width == r.xpos + r.width && this.ypos + this.height == r.ypos + r.height) ||
+                (this.xpos == r.xpos && this.ypos + this.height == r.ypos + r.height) ||
+                (this.xpos + this.width == r.xpos + r.width && this.ypos == r.ypos));
+
+            }
         // OVERLAPS
-        public boolean overlaps(int px, int py) {
-            return (px>=xpos && px<=xpos+width && py>=ypos && py<= ypos+height); } //contains method: returns true if another rectangle r is contained within this rectangle
-            //returns true if the rectangle touches the boundaries
-            //it uses the point contains method 
-            public boolean overlaps(Rectangle r)
-            {
-            return(this.contains(r.getX(),r.getY())&& this.contains(r.getX() + r.getWidth(), r.getY()+r.getHeight())); }
+        //public boolean overlaps(int px, int py) {
+           // return ((px == xpos+width) && (py == xpos+width) || ) } 
+            
+            public boolean overlaps(Rectangle2 r){
+                
+                return (this.xpos < r.xpos + r.width && this.xpos + this.width > r.xpos &&
+                this.ypos < r.ypos + r.height && this.ypos + this.height > r.ypos && !this.contains(r));
+
+
+             }
 
 
 
