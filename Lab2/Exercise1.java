@@ -27,20 +27,11 @@ public class Exercise1{
             Rectangle rect1 = new Rectangle(xpos1, ypos1, width1, height1);
             Rectangle rect2 = new Rectangle(xpos2, ypos2, width2, height2);
 
-            // size check
-            boolean rectCheck;
-
-            if (width1 >= width2 && height1 >= height2) {
-                rectCheck = true;
-            } else {
-                rectCheck = false;
-            }
-
             System.out.println(" ");
             System.out.println("Test case: " + (i + 1));
             System.out.println("Rectangle 1: " + rect1);
             System.out.println("Rectangle 2: " + rect2);
-            System.out.println("Is Rectangle 2 contained in Rectangle 1?  " + rectCheck);
+            System.out.println("Is Rectangle 2 contained in Rectangle 1?  " + rect1.contains(rect2));
         }
     }
 }
