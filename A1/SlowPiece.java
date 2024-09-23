@@ -19,11 +19,18 @@ public class SlowPiece  extends Pieces{
 
 
             if (direction.toLowerCase().equals("left") && positionX > 0){
-                setPositionX(positionX - 1);
+                setPositionX(positionX - n);
             } else if (direction.toLowerCase().equals("right") && positionY > 7){
-                setPositionX(positionX + 1);
+                setPositionX(positionX + n);
             }
 
         }
+
+        @Override
+        public String toString(){
+            return  super.toString() + "S";
+        }
+        
     }
+
 

@@ -19,16 +19,16 @@ String ui = " "; // ui variable
 System.out.println("Enter a command (type help for details)");
 
 // UI
-while(!ui.equals("exit")){ // mabye change to switch latet
+while(!ui.toLowerCase().equals("exit")){ // mabye change to switch latet
     ui = in.next();
 
 // break program
-if (ui.equals("exit")){
+if (ui.toLowerCase().equals("exit")){
     break;
 }
 
 // help commands
-if (ui.equals("help")){
+if (ui.toLowerCase().equals("help")){
           System.out.println("Possible commands are as follows:");
           System.out.println("create location [fast][flexible]: Creates a new piece.");
           System.out.println("move location direction [spaces]: Moves a piece.");
@@ -39,15 +39,18 @@ if (ui.equals("help")){
 }
 
 // print board
-if (ui.equals("print")){
+if (ui.toLowerCase().equals("print")){
 
     // to add later
     board.printOutBoard();
     System.out.println("Enter a command (type help for details)");
 }
 
+if (ui.toLowerCase().equals("move")){
 
-if (ui.equals("create")){
+}
+
+if (ui.toLowerCase().equals("create")){
       
    int positionX = in.nextInt();
    int positionY = in.nextInt();
