@@ -50,7 +50,14 @@ if (ui.toLowerCase().equals("move")){
     int positionX = in.nextInt();
     int positionY = in.nextInt();
     String direction = in.next();
-    int spacesMoved = in.nextInt();
+    int spacesMoved = 0;
+
+    
+    Pieces checkPiece = board.getBoard(positionX, positionY);
+
+    if (checkPiece instanceof FastPiece){
+        spacesMoved = in.nextInt();
+    }
 
     board.movePiece(positionX, positionY, direction, spacesMoved);
 

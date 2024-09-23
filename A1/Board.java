@@ -53,6 +53,8 @@ public class Board {
                 //System.out.println(newRowValue); //TESTING
                 //System.out.println(newColValue); //TESTING
 
+            
+
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                 
             } if (moveThePiece instanceof FastPiece){ // FAST
@@ -97,14 +99,11 @@ public class Board {
               }
             
 
+            }
+             
 
 
 
-
-
-
-        }
-    
 
     // prints out board
     public void printOutBoard(){ // fix pritning issue
@@ -120,6 +119,10 @@ public class Board {
             System.out.println();
         }
     
+}
+
+public Pieces getBoard(int row, int col){
+    return board[row][col];
 }
 
     
