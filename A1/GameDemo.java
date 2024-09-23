@@ -50,8 +50,9 @@ if (ui.toLowerCase().equals("move")){
     int positionX = in.nextInt();
     int positionY = in.nextInt();
     String direction = in.next();
+    int spacesMoved = in.nextInt();
 
-    board.movePiece(positionX, positionY, direction, positionY);
+    board.movePiece(positionX, positionY, direction, spacesMoved);
 
 }
 

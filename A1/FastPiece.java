@@ -17,16 +17,6 @@ private String distance;
 
     ; // unlimted(within board but user input is unlimited)
 
-    int positionX = getPositionX();
-    int positionY = getPositionY();
-
-
-
-    if (direction.toLowerCase().equals("left") && positionX > 0){
-        setPositionX(positionX - n);
-    } else if (direction.toLowerCase().equals("right") && positionY > 7){
-        setPositionX(positionX + n); 
-    }
 
 }
 
