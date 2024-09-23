@@ -24,6 +24,7 @@ while(!ui.toLowerCase().equals("exit")){ // mabye change to switch latet
 
 // break program
 if (ui.toLowerCase().equals("exit")){
+    System.out.print("Done.");
     break;
 }
 

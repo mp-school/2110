@@ -1,2 +1,5 @@
 TO ADD
-- to lowercase for ui commands
+- Out of index boundrray errors
+
+
+

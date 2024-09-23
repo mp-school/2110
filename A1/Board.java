@@ -29,7 +29,7 @@ public class Board {
         
 
         if (board[row][col] == null){
-            System.out.println("Error: no piece at (" + row + " " + col + ")");
+            System.out.println("Error: no piece at (" + row + " " + col + ") ");
             return false;
         } else { 
               if (moveThePiece instanceof SlowPiece){ // SLOW
@@ -38,6 +38,8 @@ public class Board {
                     board[newRowValue][newColValue] = moveThePiece;
                     moveThePiece.setPositionX(newRowValue);
                     moveThePiece.setPositionY(newColValue);
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved left 1 space" );
 
 
 
@@ -46,6 +48,8 @@ public class Board {
                     board[newRowValue][newColValue] = moveThePiece;
                     moveThePiece.setPositionX(newRowValue);
                     moveThePiece.setPositionY(newColValue);
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved right 1 space" );
                 } 
                     
                 board[row][col] = null;
@@ -61,12 +65,17 @@ public class Board {
                 if (direction.toLowerCase().equals("left")){
                     newColValue = col - spacesMoved;
                     board[newRowValue][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved left by " + spacesMoved + " spaces" ); //TESTING
                     
                    
 
                 } else if (direction.toLowerCase().equals("right")){
                     newColValue = col + spacesMoved;
                     board[newRowValue][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved right by " + spacesMoved + " spaces" ); //TESTING
+                   
                     
                     
                 }
@@ -77,8 +86,8 @@ public class Board {
                 moveThePiece.setPositionX(newColValue); // Update piece's X position
                 moveThePiece.setPositionY(newRowValue); // Update piece's Y position
                 
-                System.out.println(newRowValue); //TESTING
-                System.out.println(newColValue); //TESTING
+                
+                
 
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                 
@@ -87,24 +96,32 @@ public class Board {
                 if (direction.toLowerCase().equals("left")){
                     newColValue = col - 1;
                     board[newRowValue][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved left 1 space" );
                     
                    
 
                 } else if (direction.toLowerCase().equals("right")){
                     newColValue = col + 1;
                     board[newRowValue][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved right 1 space" );
                     
                 
 
                 } else if (direction.toLowerCase().equals("up")){
                     newRowValue = row - 1;
                     board[row][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," +col + ") " +
+                    "moved up 1 space" );
                     
                     
 
                 } else if (direction.toLowerCase().equals("down")){
                     newRowValue = row + 1;
                     board[row][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved down 1 space" );
                     
                     
                 }
@@ -114,10 +131,9 @@ public class Board {
                 board[row][col] = null; // Clear old position
                 moveThePiece.setPositionX(newColValue); // Update piece's X position
                 moveThePiece.setPositionY(newRowValue); // Update piece's Y position
-                
-                System.out.println(newRowValue); //TESTING
-                System.out.println(newColValue); //TESTING
 
+                
+                
 
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -127,24 +143,32 @@ public class Board {
                 if (direction.toLowerCase().equals("left")){
                     newColValue = col - spacesMoved;
                     board[newRowValue][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved left by " + spacesMoved + " spaces" ); //TESTING
                     
                    
 
                 } else if (direction.toLowerCase().equals("right")){
                     newColValue = col + spacesMoved;
                     board[newRowValue][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved right by " + spacesMoved + " spaces" ); //TESTING
                     
                     
 
                 } else if (direction.toLowerCase().equals("up")){
                     newRowValue = row - spacesMoved;
                     board[row][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved up by " + spacesMoved + " spaces" ); //TESTING
                     
                     
 
                 } else if (direction.toLowerCase().equals("down")){
                     newRowValue = row + spacesMoved;
                     board[row][newColValue] = moveThePiece;
+                    System.out.println("Piece at " + "(" + row + "," + col + ") " +
+                    "moved down by " + spacesMoved + " spaces" ); //TESTING
                     
                     
                 }
@@ -155,8 +179,7 @@ public class Board {
                 moveThePiece.setPositionX(newColValue); // Update piece's X position
                 moveThePiece.setPositionY(newRowValue); // Update piece's Y position
                 
-                System.out.println(newRowValue); //TESTING
-                System.out.println(newColValue); //TESTING
+               
             }
             
             return false;
