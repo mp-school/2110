@@ -61,13 +61,20 @@ if (ui.equals("create")){
    String colour = in.nextLine();
 			
    
-   Pieces gamePiece = new Pieces (name, colour, positionX, positionY );
-	System.out.println(gamePiece);	
+   
+	
 
-    if (type.equals(" fast")){
-        System.out.println("speedy");
-    } if (type.equals(" fast flexible")){
-        System.out.println("speedy and bendy");
+    if (type.toLowerCase().equals(" fast flexible")){
+        FastPiece gamePiece = new FastPiece (name, colour, positionX, positionY );
+
+    } else if (type.toLowerCase().equals(" flexible")){
+        FastPiece gamePiece = new FastPiece (name, colour, positionX, positionY );
+
+    } else if (type.toLowerCase().equals(" fast")){
+        FastPiece gamePiece = new FastPiece (name, colour, positionX, positionY );
+
+    }else {
+        SlowPiece gamePiece = new SlowPiece (name, colour, positionX, positionY );
     }
 
 System.out.println(" ");
