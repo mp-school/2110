@@ -10,9 +10,9 @@ public class SlowPiece  extends Pieces{
     }
 
     // Slow Piece moves ONE SPACE right or left
-        public void move(String direction, int n){
+        public void move(String direction){
 
-            n = 1; // one space
+           /*  int n = 1; // one space only
 
             int positionX = getPositionX();
             int positionY = getPositionY();
@@ -22,8 +22,10 @@ public class SlowPiece  extends Pieces{
                 setPositionX(positionX - n);
             } else if (direction.toLowerCase().equals("right") && positionY > 7){
                 setPositionX(positionX + n);
-            }
+            } 
 
+            */
+            
         }
 
         @Override

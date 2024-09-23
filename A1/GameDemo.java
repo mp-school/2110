@@ -47,6 +47,11 @@ if (ui.toLowerCase().equals("print")){
 }
 
 if (ui.toLowerCase().equals("move")){
+    int positionX = in.nextInt();
+    int positionY = in.nextInt();
+    String direction = in.next();
+
+    board.movePiece(positionX, positionY, direction, positionY);
 
 }
 
@@ -54,7 +59,7 @@ if (ui.toLowerCase().equals("create")){
       
    int positionX = in.nextInt();
    int positionY = in.nextInt();
-   String type = in.nextLine(); // forget about for now
+   String type = in.nextLine(); 
    
 
    System.out.println("Input a name for the new piece:");
@@ -64,10 +69,8 @@ if (ui.toLowerCase().equals("create")){
    System.out.println("Input a colour for the new piece:");
    String colour = in.nextLine();
 			
-   
-   
-	
 
+// creating piece based on type inputed
     if (type.toLowerCase().equals(" fast flexible")){
         FastFlexible gamePiece = new FastFlexible (name, colour, positionX, positionY );
         board.addPiece(gamePiece, positionX, positionY);

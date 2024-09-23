@@ -15,7 +15,7 @@ private String distance;
    // Slow Piece moves ONE SPACE right or left
    public void move(String direction, int n){
 
-    n = ; // one space
+    ; // unlimted(within board but user input is unlimited)
 
     int positionX = getPositionX();
     int positionY = getPositionY();
