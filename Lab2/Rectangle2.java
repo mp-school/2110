@@ -1,10 +1,18 @@
+
+// Rectangle 2
+// Megan Picard
+// B00939548
+
 package Lab2;
 
+//Rectangle class that defines a Rectangle object with xpos, ypos, width and height
+//Has two contains methods
 public class Rectangle2 {
     private int xpos, ypos, width, height;
     //constructors
     public Rectangle2(){} public Rectangle2(int xpos, int ypos, int width, int height){ this.xpos=xpos; this.ypos=ypos; this.width=width; this.height=height;}
-    //setters and getters public void setX(int xpos){this.xpos=xpos;}
+    //setters and getters 
+    public void setX(int xpos){this.xpos=xpos;}
     public void setY(int ypos){this.ypos=ypos;} public void setWidth(int width){this.width=width;} public void setHeight(int height){this.height=height;}
     public int getX(){return xpos;} public int getY(){return ypos;} public int getWidth(){return width;}
     public int getHeight(){return height;}
@@ -32,22 +40,53 @@ public class Rectangle2 {
            
             public boolean touch(Rectangle2 r){
 
-                return (this.xpos == r.xpos + r.width || this.xpos + this.width == r.xpos ||
-                this.ypos == r.ypos + r.height || this.ypos + this.height == r.ypos ||
-                (this.xpos == r.xpos && this.ypos == r.ypos) ||
-                (this.xpos + this.width == r.xpos + r.width && this.ypos + this.height == r.ypos + r.height) ||
-                (this.xpos == r.xpos && this.ypos + this.height == r.ypos + r.height) ||
-                (this.xpos + this.width == r.xpos + r.width && this.ypos == r.ypos));
+                // checks if left/right edge is at right/left edge
+                if (this.xpos == r.xpos + r.width || this.xpos + this.width == r.xpos){
+                    return true;
 
+                // checks if top/bottom edge is at bottom/top edge
+                }else if (this.ypos == r.ypos + r.height || this.ypos + this.height == r.ypos){
+                    return true;
+
+                // checking for exact corner touching
+
+                // top left
+                } else if (this.xpos == r.xpos && this.ypos == r.ypos){
+                    return true;
+
+                // top right
+                } else if (this.xpos + this.width == r.xpos + r.width && this.ypos == r.ypos){
+                    return true;
+            
+                // bootom left
+                } else if (this.xpos + this.width == r.xpos + r.width && this.ypos + this.height == r.ypos + r.height){
+                    return true;
+
+                // bottom right
+                } else if (this.xpos == r.xpos && this.ypos + this.height == r.ypos + r.height){
+                    return true;
+
+                }else { // all not true, returns false
+                    return false;
+                }
+            
             }
+
+
         // OVERLAPS
         //public boolean overlaps(int px, int py) {
            // return ((px == xpos+width) && (py == xpos+width) || ) } 
             
             public boolean overlaps(Rectangle2 r){
-                
-                return (this.xpos < r.xpos + r.width && this.xpos + this.width > r.xpos &&
-                this.ypos < r.ypos + r.height && this.ypos + this.height > r.ypos && !this.contains(r));
+
+               // checks for overlap AND that it doesnt contain the rectangle
+               if (this.xpos < r.xpos + r.width && this.xpos + this.width > r.xpos &&
+               this.ypos < r.ypos + r.height && this.ypos + this.height > r.ypos && !this.contains(r)){
+               return true;
+
+               } else { // if all above if not true
+                return false;
+               }
 
 
              }

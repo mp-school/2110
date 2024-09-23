@@ -1,13 +1,18 @@
-package Lab2;
 
+// Rectangle 1
+// Megan Picard
+// B00939548
+
+package Lab2;
 
 //Rectangle class that defines a Rectangle object with xpos, ypos, width and height
 //Has two contains methods
-public class Rectangle{ //instance variables
+public class Rectangle{ 
     private int xpos, ypos, width, height;
     //constructors
     public Rectangle(){} public Rectangle(int xpos, int ypos, int width, int height){ this.xpos=xpos; this.ypos=ypos; this.width=width; this.height=height;}
-    //setters and getters public void setX(int xpos){this.xpos=xpos;}
+    //setters and getters 
+    public void setX(int xpos){this.xpos=xpos;}
     public void setY(int ypos){this.ypos=ypos;} public void setWidth(int width){this.width=width;} public void setHeight(int height){this.height=height;}
     public int getX(){return xpos;} public int getY(){return ypos;} public int getWidth(){return width;}
     public int getHeight(){return height;}

@@ -1,3 +1,7 @@
+
+// Megan Picard
+// B00939548
+
 package Lab2;
 import java.util.*; // import scanner
 
@@ -24,9 +28,11 @@ public class Exercise1{
             int width2 = in.nextInt();
             int height2 = in.nextInt();
 
+            // rectangle objects
             Rectangle rect1 = new Rectangle(xpos1, ypos1, width1, height1);
             Rectangle rect2 = new Rectangle(xpos2, ypos2, width2, height2);
 
+            // printing
             System.out.println(" ");
             System.out.println("Test case: " + (i + 1));
             System.out.println("Rectangle 1: " + rect1);
