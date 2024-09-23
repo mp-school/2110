@@ -21,8 +21,8 @@ public class FastFlexible extends FastPiece {
 
 
 
-    public String toString() {
-        return super.toString() + "FF";
+    public String toString() {  // adds F so now its FF
+        return super.toString() + "F";
          }
 
 

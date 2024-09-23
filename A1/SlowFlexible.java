@@ -5,4 +5,10 @@ public class SlowFlexible  extends SlowPiece{
         super(name, colour, positionX, positionY); // from Pieces class
 
     }
+
+
+
+    public String toString() { // adds F so now its SF
+        return super.toString() + "F"; 
+         }
 }
