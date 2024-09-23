@@ -6,7 +6,28 @@ public class FastFlexible extends FastPiece {
 
     public FastFlexible(String name, String colour, int positionX, int positionY){
         super(name, colour, positionX, positionY); // from Pieces class
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    public String toString() {
+        return super.toString() + "FF";
+         }
+
+
+
 
     }
 
-}
+

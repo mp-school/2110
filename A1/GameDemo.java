@@ -12,6 +12,7 @@ Scanner in = new Scanner(System.in); // Read in
 //int size = 8;
 //String[][] pieceTracker = new String[size][size];
 
+Board board = new Board(); // creating board object
 String ui = " "; // ui variable
 
 // orignial enter statement
@@ -41,7 +42,7 @@ if (ui.equals("help")){
 if (ui.equals("print")){
 
     // to add later
-    System.out.println("printed");
+    board.printOutBoard();
     System.out.println("Enter a command (type help for details)");
 }
 
@@ -65,22 +66,27 @@ if (ui.equals("create")){
 	
 
     if (type.toLowerCase().equals(" fast flexible")){
-        FastPiece gamePiece = new FastPiece (name, colour, positionX, positionY );
+        FastFlexible gamePiece = new FastFlexible (name, colour, positionX, positionY );
+        board.addPiece(gamePiece, positionX, positionY);
 
     } else if (type.toLowerCase().equals(" flexible")){
-        FastPiece gamePiece = new FastPiece (name, colour, positionX, positionY );
+        SlowFlexible gamePiece = new SlowFlexible (name, colour, positionX, positionY );
+        board.addPiece(gamePiece, positionX, positionY);
 
     } else if (type.toLowerCase().equals(" fast")){
         FastPiece gamePiece = new FastPiece (name, colour, positionX, positionY );
+        board.addPiece(gamePiece, positionX, positionY);
 
     }else {
         SlowPiece gamePiece = new SlowPiece (name, colour, positionX, positionY );
+        board.addPiece(gamePiece, positionX, positionY);
     }
+
 
 System.out.println(" ");
 System.out.println("Enter a command (type help for details)");
 
-System.out.println(type);
+
 
 
 
