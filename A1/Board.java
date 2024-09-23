@@ -31,6 +31,10 @@ public class Board {
         if (board[row][col] == null){
             System.out.println("Error: no piece at (" + row + " " + col + ") ");
             return false;
+
+        }else if (!(newColValue < 0 || newColValue >= 8 || newRowValue < 0 || newRowValue >= 8)) { 
+            System.out.println("Error : Cannot move this piece out of bounds");
+            
         } else { 
               if (moveThePiece instanceof SlowPiece){ // SLOW
                 if (direction.toLowerCase().equals("left")){
@@ -92,6 +96,9 @@ public class Board {
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                 
             //Can move UP and DOWN, 1 Space
+            if (newColValue < 0 || newColValue >= 8 || newRowValue < 0 || newRowValue >= 8){
+                    
+            
             } if (moveThePiece instanceof SlowFlexible){ // SLOW FLEX
                 if (direction.toLowerCase().equals("left")){
                     newColValue = col - 1;
@@ -127,6 +134,7 @@ public class Board {
                 }
                     
                 // Move the piece to the new position
+                
                 board[newRowValue][newColValue] = moveThePiece; // Move piece to new position
                 board[row][col] = null; // Clear old position
                 moveThePiece.setPositionX(newColValue); // Update piece's X position
@@ -181,6 +189,7 @@ public class Board {
                 
                
             }
+        }
             
             return false;
 
@@ -196,10 +205,17 @@ public class Board {
                 if (board[i][j] != null){
                     System.out.print(board[i][j].toString() + " ");
                 } else {
-                    System.out.print("       --       ");
+                    System.out.print("  ");
+                    System.out.print("  ");
+                    System.out.print("  ");
+                    System.out.print("--");
+                    System.out.print("  ");
+                    System.out.print("  ");
+                    System.out.print("  ");
                 }
             }
 
+            System.out.println();
             System.out.println();
         }
     
