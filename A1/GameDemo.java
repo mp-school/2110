@@ -55,9 +55,9 @@ if (ui.toLowerCase().equals("move")){
     
     Pieces checkPiece = board.getBoard(positionX, positionY);
 
-    if (checkPiece instanceof FastPiece){
+    if (checkPiece instanceof FastPiece || checkPiece instanceof FastFlexible){
         spacesMoved = in.nextInt();
-    }
+    } 
 
     board.movePiece(positionX, positionY, direction, spacesMoved);
 
@@ -101,11 +101,9 @@ System.out.println(" ");
 System.out.println("Enter a command (type help for details)");
 
 
-
-
-
-
 }
     }
+
+    in.close(); // close scanner
 }
 }
