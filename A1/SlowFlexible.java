@@ -7,9 +7,14 @@ public class SlowFlexible  extends SlowPiece{
     }
 
  // Slow Piece moves ONE SPACE right or left/ up or down
- public void move(String direction){
+ public boolean move(String direction){
        
- 
+    
+        if (getPositionX() + 1 >= 8 || getPositionY() + 1 >= 8 || getPositionX() - 1 < 0  || getPositionY() - 1 < 0){
+            return false;
+        } else {
+            return true;
+        }
     
  }
 

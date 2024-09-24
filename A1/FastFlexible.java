@@ -9,8 +9,20 @@ public class FastFlexible extends FastPiece {
     }
 
      // Fast flex moves N SPACE right or left/ up or down
-   public void move(String direction, int n){
+   public boolean move(String direction, int n){
        
+  
+    if (getPositionX() + n >= 8 || getPositionY() + n >= 8 || getPositionX() - n < 0  || getPositionY() - n < 0){
+        return false;
+    } else {
+        return true;
+    }
+      
+
+
+
+
+
 }
 
 
