@@ -1,7 +1,7 @@
-package A1;
+//package A1;
 // Assignment 1 - Csci 2110
 // Author: Megan Picard
-// Purpose -> 
+
 
 public class Pieces{
     private String name;
@@ -17,20 +17,20 @@ public Pieces(String name, String colour, int positionX, int positionY){
     this.positionY = positionY;
     }
 
-// Getters
+// getters
 public String getName(){return name;}
 public String getColour(){return colour;}
 public int getPositionX(){return positionX;}
 public int getPositionY(){return positionY;}
 
-// Setters
+// setters
 public void setName(String name){this.name = name;}
 public void setColour(String colour){this.colour = colour;}
 public void setPositionX(int positionX){this.positionX = positionX;}
 public void setPositionY(int positionY){this.positionY = positionY;}
 
 
-public String toString(){
+public String toString(){ // rteurns name and colour
     return  name + colour;
 }
 

@@ -1,6 +1,8 @@
-package A1;
+//package A1;
+// Assignment 1 - Csci 2110
+// Author: Megan Picard
+//
 
-import java.util.*;
 
 public class FastPiece extends Pieces {
     
@@ -13,7 +15,7 @@ private String distance;
 
    
    // fast moves N SPACE right or left
-   public boolean move(String direction, int n){
+   public boolean move(String distance, int n){
    
          
         if (getPositionX() + n >= 8 || getPositionY() + n >= 8 || getPositionX() - n < 0  || getPositionY() - n < 0){

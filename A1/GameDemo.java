@@ -1,7 +1,7 @@
-package A1;
+//package A1;
 // Assignment 1 - Csci 2110
 // Author: Megan Picard
-// Purpose -> 
+//
 
 import java.util.*;
 
@@ -9,8 +9,6 @@ public class GameDemo{
     public static void main (String[] args){
 Scanner in = new Scanner(System.in); // Read in
 
-//int size = 8;
-//String[][] pieceTracker = new String[size][size];
 
 Board board = new Board(); // creating board object
 String ui = " "; // ui variable
@@ -33,11 +31,15 @@ switch (ui.toLowerCase()){
              System.out.println("print: Displays the board.");
             System.out.println("help: Displays help");
             System.out.println("exit: Exits the program.");
+            // orignial enter statement
+            System.out.println("Enter a command (type help for details)");
     break;
 
     // prints board
     case ("print"):
         board.printOutBoard();
+        // orignial enter statement
+        System.out.println("Enter a command (type help for details)");
     break;
 
     // gets details for moving pieces
@@ -57,14 +59,12 @@ switch (ui.toLowerCase()){
 
         // call move piece method
         board.movePiece(positionX, positionY, direction, spacesMoved);
+        // orignial enter statement
+        System.out.println("Enter a command (type help for details)");
 
     break;
 
  }
-
-
-// orignial enter statement
-System.out.println("Enter a command (type help for details)");
 
 
 // if create is entered it goes based of type to create an object for that class

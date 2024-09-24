@@ -1,4 +1,8 @@
-package A1;
+//package A1;
+// Assignment 1 - Csci 2110
+// Author: Megan Picard
+//
+
 
 public class SlowFlexible  extends SlowPiece{
     public SlowFlexible(String name, String colour, int positionX, int positionY){

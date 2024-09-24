@@ -23,17 +23,21 @@ public class Board {
 
         Pieces moveThePiece = board[row][col];
 
-        //
         int newRowValue = row;
         int newColValue = col;
     
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         if (board[row][col] == null){
             System.out.println("Error: no piece at (" + row + " " + col + ") ");
             return false;
         } else { 
 
-              if (moveThePiece instanceof SlowPiece){ // SLOW
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // SLOW
+
+
+              if (moveThePiece instanceof SlowPiece){ 
 
                if (((SlowPiece) moveThePiece).move(direction) == true){
                     switch (direction){
@@ -59,7 +63,7 @@ public class Board {
                     }
 
                     
-               } if (((SlowPiece) moveThePiece).move(direction) == false){
+               } if (newRowValue < 0 || newRowValue >= 8 || newColValue < 0 || newColValue >= 8) {
                 System.out.println("Out of Bounds!!");
                }
 
@@ -69,15 +73,15 @@ public class Board {
                 board[row][col] = null; // Clear old position
                
 
-            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // FAST
                 
-            } if (moveThePiece instanceof FastPiece){ // FAST
+            } if (moveThePiece instanceof FastPiece){ 
 
 
                if (((FastPiece) moveThePiece).move(direction, spacesMoved) == true){
                 switch (direction){
                     case "left":
-                    newColValue = col - 1;
+                    newColValue = col - spacesMoved;
                 board[newRowValue][newColValue] = moveThePiece;
                 moveThePiece.setPositionX(newRowValue);
                 moveThePiece.setPositionY(newColValue);
@@ -86,7 +90,7 @@ public class Board {
                 break;
 
                 case "right" :
-                newColValue = col + 1;
+                newColValue = col + spacesMoved;
 
                 board[newRowValue][newColValue] = moveThePiece;
                 moveThePiece.setPositionX(newRowValue);
@@ -98,16 +102,15 @@ public class Board {
             } 
 
                     
-                }else if (((FastPiece) moveThePiece).move(direction, spacesMoved) == false){
+                }if (newRowValue < 0 || newRowValue >= 8 || newColValue < 0 || newColValue >= 8){
                     System.out.println("Out of Bounds!!");
 
                 board[row][col] = null; // Clear old position
                 
             
-            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // SLOW FLEX
                 
-        } if (moveThePiece instanceof SlowFlexible){ // FAST
-
+        } if (moveThePiece instanceof SlowFlexible){ 
 
             if (((SlowFlexible) moveThePiece).move(direction) == true){
              switch (direction){
@@ -147,7 +150,7 @@ public class Board {
             newRowValue = row + 1;
                        board[row][newColValue] = moveThePiece;
                        System.out.println("Piece at " + "(" + row + "," +col + ") " +
-                       "moved up 1 space" );
+                       "moved down 1 space" );
                        moveThePiece.setPositionX(newRowValue);
                        moveThePiece.setPositionY(newColValue);
                break;
@@ -158,7 +161,7 @@ public class Board {
 
 
                  
-             }else if (((FastPiece) moveThePiece).move(direction, spacesMoved) == false){
+             if (newRowValue < 0 || newRowValue >= 8 || newColValue < 0 || newColValue >= 8){
                  System.out.println("Out of Bounds!!");
 
              board[row][col] = null; // Clear old position
@@ -166,19 +169,19 @@ public class Board {
 
         }
 
-            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - // FAST FLEX
 
                 
-        } if (moveThePiece instanceof FastFlexible){ // FAST
+        } if (moveThePiece instanceof FastFlexible){ 
 
 
             if (((FastFlexible) moveThePiece).move(direction, spacesMoved) == true){
              switch (direction){
                 case "left":
-                newColValue = col - 1;
+                newColValue = col - spacesMoved;
                 board[newRowValue][newColValue] = moveThePiece;
                 System.out.println("Piece at " + "(" + row + "," + col + ") " +
-                "moved left 1 space" );
+                "moved left "+  spacesMoved + " space(s)" );
                 moveThePiece.setPositionX(newRowValue);
                 moveThePiece.setPositionY(newColValue);
             
@@ -186,10 +189,10 @@ public class Board {
 
              case "right" :
 
-            newColValue = col + 1;
+            newColValue = col + spacesMoved;
             board[newRowValue][newColValue] = moveThePiece;
             System.out.println("Piece at " + "(" + row + "," + col + ") " +
-            "moved right 1 space" );
+            "moved right "+  spacesMoved + " space(s)" );
              moveThePiece.setPositionX(newRowValue);
              moveThePiece.setPositionY(newColValue);
             
@@ -197,20 +200,20 @@ public class Board {
              
          case "up" :
 
-         newRowValue = row - 1;
+         newRowValue = row - spacesMoved;
                     board[row][newColValue] = moveThePiece;
                     System.out.println("Piece at " + "(" + row + "," +col + ") " +
-                    "moved up 1 space" );
+                    "moved up " +  spacesMoved + " space(s)" );
                     moveThePiece.setPositionX(newRowValue);
                     moveThePiece.setPositionY(newColValue);
             break;
 
             case "down" :
 
-            newRowValue = row + 1;
+            newRowValue = row + spacesMoved;
                        board[row][newColValue] = moveThePiece;
                        System.out.println("Piece at " + "(" + row + "," +col + ") " +
-                       "moved up 1 space" );
+                       "moved down "+  spacesMoved + " space(s)" );
                        moveThePiece.setPositionX(newRowValue);
                        moveThePiece.setPositionY(newColValue);
                break;
@@ -221,7 +224,7 @@ public class Board {
 
 
                  
-             }else if (((FastPiece) moveThePiece).move(direction, spacesMoved) == false){
+             }if (newRowValue < 0 || newRowValue >= 8 || newColValue < 0 || newColValue >= 8){
                  System.out.println("Out of Bounds!!");
 
              board[row][col] = null; // Clear old position
@@ -231,13 +234,6 @@ public class Board {
 
 
     }
-                    
-
-                //if (newRowValue - 1 < 0 || newRowValue + 1 >= 8 || newColValue - 1 < 0 || newColValue + 1 >= 8) {
-                //    System.out.println("Error: Move out of bounds to (" + newRowValue + ", " + newColValue + ")");
-                 //   return false;
-                //}
-
                 
                 board[newRowValue][newColValue] = moveThePiece; // Move piece to new position
                 board[row][col] = null; // Clear old position
@@ -248,10 +244,10 @@ public class Board {
                return true;
             }
             
-        
+        }
 
     // prints out board
-    public void printOutBoard(){ // fix pritning issue
+    public void printOutBoard(){ 
         for (int i = 0; i < 8; i++){
             for (int j = 0; j < 8; j++){
                 if (board[i][j] != null){
