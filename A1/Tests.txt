@@ -1,0 +1,159 @@
+Test Case 1 - Slow Piece Test
+
+create 6 2
+Enter a command (type help for details)
+Input a name for the new piece:
+Megan
+Input a colour for the new piece:
+Green
+ 
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --  MeganGreenS  --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+Enter a command (type help for details)
+move 6 2 left
+Piece at (6, 2) moved left 1 space
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --  MeganGreenS  --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+Enter a command (type help for details)
+move 6 1 right
+Piece at (6, 1) moved right 1 space
+Enter a command (type help for details)
+create 3 4 
+Enter a command (type help for details)
+Input a name for the new piece:
+Megan
+Input a colour for the new piece:
+Pink
+ 
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --  MeganPinkS  --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --  MeganGreenS  --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+Enter a command (type help for details)
+
+
+
+Test Case 2 - Fast Piece
+
+create 7 4 fast
+Enter a command (type help for details)
+Input a name for the new piece:
+Megan
+Input a colour for the new piece:
+Green
+ 
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --  MeganGreenF  --    --    --  
+Enter a command (type help for details)
+move 7 4 left 2
+Piece at (7, 4) moved left by 2 spaces
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --  MeganGreenF  --    --    --    --    --  
+Enter a command (type help for details)
+create 3 2 fast
+Enter a command (type help for details)
+Input a name for the new piece:
+Megan 
+Input a colour for the new piece:
+Pink
+ 
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --  Megan PinkF  --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --  MeganGreenF  --    --    --    --    --  
+Enter a command (type help for details)
+move 3 2 right 4
+Piece at (3, 2) moved right by 4 spaces
+Enter a command (type help for details)
+print
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --  Megan PinkF  --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --    --    --    --    --    --    --  
+  --    --  MeganGreenF  --    --    --    --    --  
+Enter a command (type help for details)
+
+
+Test Case 3 - Slow Flexible Piece Test
+
+
+
+
+
+
+
+
+
+
+Test Case 4 - Fast Flexible Piece Test
+
+
+
+
+
+
+
+Test Case 5 - Out of Bounds Test
+
+
+
+
+
+
+Test Case 6 - Trying to Move Empty Space Test
+
+
+
+
+
+
+
+
+Test Case 7 - Commands Test

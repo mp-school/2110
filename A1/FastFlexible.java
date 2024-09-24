@@ -8,7 +8,7 @@ public class FastFlexible extends FastPiece {
         super(name, colour, positionX, positionY); // from Pieces class
     }
 
-     // Slow Piece moves ONE SPACE right or left
+     // Fast flex moves N SPACE right or left/ up or down
    public void move(String direction, int n){
        
 }

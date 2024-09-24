@@ -6,7 +6,7 @@ public class SlowFlexible  extends SlowPiece{
 
     }
 
- // Slow Piece moves ONE SPACE right or left
+ // Slow Piece moves ONE SPACE right or left/ up or down
  public void move(String direction){
        
  

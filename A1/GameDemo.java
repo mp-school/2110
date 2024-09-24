@@ -18,8 +18,8 @@ String ui = " "; // ui variable
 while(!ui.toLowerCase().equals("exit")){ 
     ui = in.next();
 
-switch (ui.toLowerCase()){
 
+switch (ui.toLowerCase()){
     // break program
     case("exit"): 
         System.out.print("Done.");
@@ -40,6 +40,7 @@ switch (ui.toLowerCase()){
         board.printOutBoard();
     break;
 
+    // gets details for moving pieces
     case ("move"):
         int positionX = in.nextInt();
         int positionY = in.nextInt();
@@ -49,13 +50,15 @@ switch (ui.toLowerCase()){
     
      Pieces checkPiece = board.getBoard(positionX, positionY);
 
+     // only need spaces moved if fast piece
      if (checkPiece instanceof FastPiece || checkPiece instanceof FastFlexible){
             spacesMoved = in.nextInt();
         } 
 
+        // call move piece method
         board.movePiece(positionX, positionY, direction, spacesMoved);
-    break;
 
+    break;
 
  }
 
@@ -64,6 +67,7 @@ switch (ui.toLowerCase()){
 System.out.println("Enter a command (type help for details)");
 
 
+// if create is entered it goes based of type to create an object for that class
 if (ui.toLowerCase().equals("create")){
       
    int positionX = in.nextInt();
