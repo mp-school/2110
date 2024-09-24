@@ -8,6 +8,13 @@ public class FastFlexible extends FastPiece {
         super(name, colour, positionX, positionY); // from Pieces class
     }
 
+     // Slow Piece moves ONE SPACE right or left
+   public void move(String direction, int n){
+       
+ 
+}
+
+
 
 
     public String toString() {  // adds F so now its FF

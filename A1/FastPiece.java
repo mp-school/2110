@@ -15,8 +15,9 @@ private String distance;
    // Slow Piece moves ONE SPACE right or left
    public void move(String direction, int n){
 
-    
 
+
+    
 
 }
 

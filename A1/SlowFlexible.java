@@ -6,7 +6,12 @@ public class SlowFlexible  extends SlowPiece{
 
     }
 
-
+ // Slow Piece moves ONE SPACE right or left
+ public void move(String direction){
+       
+ 
+    
+ }
 
     public String toString() { // adds F so now its SF
         return super.toString() + "F"; 
