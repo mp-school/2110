@@ -16,9 +16,6 @@ private String distance;
    public void move(String direction, int n){
 
 
-
-    
-
 }
 
     @Override // shows f for fast on printed board

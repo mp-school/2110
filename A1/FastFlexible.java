@@ -11,9 +11,7 @@ public class FastFlexible extends FastPiece {
      // Slow Piece moves ONE SPACE right or left
    public void move(String direction, int n){
        
- 
 }
-
 
 
 

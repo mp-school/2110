@@ -11,16 +11,6 @@ public class SlowPiece extends Pieces{
 
     // Slow Piece moves ONE SPACE right or left
         public void move(String direction){
-
-       switch (direction){
-        case "left":
-            if (getPositionX() < 0) setPositionX(getPositionX() - 1);
-            break;
-
-        case "right":
-        if (getPositionX() > 8) setPositionX(getPositionX() - 1);
-            break;
-       }
              
         }
 
