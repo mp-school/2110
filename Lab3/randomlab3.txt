@@ -1,0 +1,8 @@
+
+algo methods
+
+1.
+- create method to calculate up to inputed number's prime and store in an array
+- but this requires calculating like 1000000s of prime numbers and woud take so muc time+storage
+
+2.

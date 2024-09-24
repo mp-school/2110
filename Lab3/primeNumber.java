@@ -5,7 +5,15 @@ import java.util.*;
 public class primeNumber{
 
     public long startTime, endTime, executionTime;
+    static ArrayList<Integer> list = new ArrayList<Integer>();
     
+    public int checkPrime(int added){
+        added = 0;
+
+        
+
+        return added;
+    }
     public static void main(String[] args){
 
         //startTime = System.currentTimeMillis();
@@ -16,12 +24,17 @@ public class primeNumber{
         Scanner in = new Scanner(System.in);
 
         // ui var
-        int ui = in.nextInt();
 
-        while (ui != 0){
+        int p = 2;
+        if (p/2 == 0){
+            System.out.println(p);
+            p = p +2;
+        }
+        
 
-            int uiNext = in.nextInt();
-            System.out.println(uiNext);
+            
+
+            
 
         } 
 
@@ -35,5 +48,5 @@ public class primeNumber{
 
     }   
     
-        }
+        
     
