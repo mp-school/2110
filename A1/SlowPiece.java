@@ -12,7 +12,7 @@ public class SlowPiece extends Pieces{
     // Slow Piece moves ONE SPACE right or left
         public boolean move(String direction){
          
-            if (getPositionX() + 1 > 8 || getPositionY() + 1 > 8 || getPositionX() - 1 < 0  || getPositionY() - 1 < 0){
+            if (getPositionX() + 1 >= 8 || getPositionY() + 1 >= 8 || getPositionX() - 1 < 0  || getPositionY() - 1 < 0){
                 return false;
             } else {
                 return true;

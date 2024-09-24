@@ -32,19 +32,21 @@ public class Board {
             System.out.println("Error: no piece at (" + row + " " + col + ") ");
             return false;
         } else { 
+
               if (moveThePiece instanceof SlowPiece){ // SLOW
 
-                if (direction.toLowerCase().equals("left")){
-                    newColValue = col - 1;
+               if (((SlowPiece) moveThePiece).move(direction) == true){
+                    switch (direction){
+                        case "left":
+                        newColValue = col - 1;
                     board[newRowValue][newColValue] = moveThePiece;
                     moveThePiece.setPositionX(newRowValue);
                     moveThePiece.setPositionY(newColValue);
                     System.out.println("Piece at " + "(" + row + "," + col + ") " +
                     "moved left 1 space" );
+                    break;
 
-
-
-                } else if (direction.toLowerCase().equals("right")){
+                    case "right" :
                     newColValue = col + 1;
 
                     board[newRowValue][newColValue] = moveThePiece;
@@ -52,7 +54,17 @@ public class Board {
                     moveThePiece.setPositionY(newColValue);
                     System.out.println("Piece at " + "(" + row + "," + col + ") " +
                     "moved right 1 space" );
-                } 
+                    break;
+                    
+                    }
+
+                    
+               } if (((SlowPiece) moveThePiece).move(direction) == false){
+                System.out.println("Out of Bounds!!");
+               }
+
+                
+
                     
                 board[row][col] = null; // Clear old position
                
@@ -150,7 +162,7 @@ public class Board {
                     
                     
 
-                } else if (direction.toLowerCase().equals("down")){
+                } else if (direction.toLowerCase().equals("down" )){
                     newRowValue = row + spacesMoved;
                     board[row][newColValue] = moveThePiece;
                     System.out.println("Piece at " + "(" + row + "," + col + ") " +
