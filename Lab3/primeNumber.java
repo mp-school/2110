@@ -25,10 +25,7 @@ public class primeNumber{
 
         // ui var
 
-        int p = 2;
-        if (p/2 == 0){
-            System.out.println(p);
-            p = p +2;
+    
         }
         
 
