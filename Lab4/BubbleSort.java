@@ -1,4 +1,7 @@
-package Lab4; // comment out later
+// Full Name: [Megan Picard]
+// ID Number: [B00939548]
+
+package Lab4; // comment out when handing in
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -11,22 +14,28 @@ import java.util.stream.IntStream;
  /* 
         
         Time Complexity
-        100 = 
-        1000 =
-        10000 =
-        100000 =
-    
+        100 = 0ms
+        1000 = 8ms
+        10000 = 103
+        100000 = 18328ms
+
  */ 
  
-
 
 public class BubbleSort{
  public static void main(String[] args){
  
     Scanner in = new Scanner(System.in);
+    System.out.println(" ");
+    System.out.println(" - - - Bubble Sort - - - ");
+    System.out.println(" ");
 
     while(true){
+  
+    System.out.println(" ");
     System.out.print("Input Array Size: ");
+    
+
     int n = in.nextInt(); // n array size
 
     // randomized array 0 - n
@@ -40,20 +49,27 @@ public class BubbleSort{
 
     // sort
 
+    // excution -> start
     long startTime, endTime, executionTime;
     startTime = System.currentTimeMillis();
 
     sort(randomArr); // call sort method
 
+    // excution  -> end
     endTime = System.currentTimeMillis();
     executionTime = endTime - startTime;
 
-    System.out.print("Sorted Array: "); // test
-    for(int i=0; i < randomArr.length; i++)
-{
-    System.out.print(randomArr[i] + " ");
     System.out.println(" ");
-}
+    System.out.print("Sorted Array: "); 
+    System.out.print("[");
+
+    for(int i=0; i < randomArr.length; i++){
+        System.out.print(randomArr[i] + ", ");
+    }
+
+    System.out.print("]");
+    System.out.println(" ");
+
 
     System.out.println(" ");
     System.out.print("Excution Time: "); // test
@@ -65,9 +81,7 @@ public class BubbleSort{
 
 
 
- //endTime = System.currentTimeMillis();
- //executionTime = endTime - startTime;
-//display the executionTIme
+
 
 }
  public static int[] sort(int[] arr){
