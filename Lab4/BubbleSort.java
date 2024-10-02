@@ -8,6 +8,17 @@ import java.util.stream.IntStream;
  //create an integer array of size n with random integers
  //the range of random integers is from 1 to n
 
+ /* 
+        
+        Time Complexity
+        100 = 
+        1000 =
+        10000 =
+        100000 =
+    
+ */ 
+ 
+
 
 public class BubbleSort{
  public static void main(String[] args){
@@ -28,26 +39,32 @@ public class BubbleSort{
     System.out.println(" ");
 
     // sort
+
+    long startTime, endTime, executionTime;
+    startTime = System.currentTimeMillis();
+
     sort(randomArr); // call sort method
+
+    endTime = System.currentTimeMillis();
+    executionTime = endTime - startTime;
 
     System.out.print("Sorted Array: "); // test
     for(int i=0; i < randomArr.length; i++)
 {
     System.out.print(randomArr[i] + " ");
+    System.out.println(" ");
 }
-    System.out.println(" ");
-    
-
 
     System.out.println(" ");
-    //for (int[] print : sort.(randomArr[])){
-
-    //}
+    System.out.print("Excution Time: "); // test
+    System.out.print(executionTime); // test
+    System.out.print(" ms"); // test
+    System.out.println(" ");
+   
     }
 
- //long startTime, endTime, executionTime;
- //startTime = System.currentTimeMillis();
- //call to the sort method
+
+
  //endTime = System.currentTimeMillis();
  //executionTime = endTime - startTime;
 //display the executionTIme
