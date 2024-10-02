@@ -19,7 +19,7 @@ public class BubbleSort{
     int n = in.nextInt(); // n array size
 
     // randomized array 0 - n
-    int[]  randomArr = IntStream.generate(() -> new Random().nextInt(n)).limit(n-1).toArray();
+    int[]  randomArr = IntStream.generate(() -> new Random().nextInt(n-1)).limit(n-1).toArray();
 
 
     // no sort
@@ -55,22 +55,17 @@ public class BubbleSort{
 }
  public static int[] sort(int[] arr){
 
-   boolean didSwap;
    int temp = 0;
 
  for (int k = 1; k < arr.length; k++) {
-    didSwap = false;
-  
-   
     for (int i = 0; i < arr.length - k; i++) {
         if (arr[i] > arr[i + 1]) {
-
-             // Swap arr[j] and arr[j+1]
-             temp = arr[k];
-             arr[k] = arr[k + 1];
-             arr[k + 1] = temp;
-             didSwap = true;
-
+                    
+            // Swap arr[j] and arr[j+1]
+            temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+            
     }
     }
  
