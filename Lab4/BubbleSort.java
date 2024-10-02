@@ -28,7 +28,13 @@ public class BubbleSort{
     System.out.println(" ");
 
     // sort
+    sort(randomArr); // call sort method
+
     System.out.print("Sorted Array: "); // test
+    for(int i=0; i < randomArr.length; i++)
+{
+    System.out.print(randomArr[i] + " ");
+}
     System.out.println(" ");
     
 
@@ -50,7 +56,7 @@ public class BubbleSort{
  public static int[] sort(int[] arr){
 
    boolean didSwap;
-   int temp;
+   int temp = 0;
 
  for (int k = 1; k < arr.length; k++) {
     didSwap = false;
